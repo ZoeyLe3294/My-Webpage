@@ -1,49 +1,97 @@
+*{
+  padding: 0;
+  margin: 0;
+}
 html {
     font-size: 20px;
     background-color: rgb(255, 255, 255);
-    /* font-family:'Texturina', serif; */
-    font-family: "JetBrains Mono",monospace;
-    color: rgb(0, 0, 0);
+    font-family:'Ubuntu Mono', serif;
+    /* font-family: "Linlegrey",monospace; */
+    color: #36395A;
     /* text-align: center; */
     position: relative;
     min-height: 100%;
 }
-html, body{
-    padding: 0;
-    margin: 0;
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
-body {
-    width: 100%;
-    min-height: 100%;
-    display: grid;
-    grid-template-rows: 1fr auto;
-    margin: 0 0 10%;
+.pages {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
 }
+.page {
+  /* width: 100%; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  transition: width 800ms ease,opacity 750ms ease; 
+}
+#profilepage.active {
+  width: 0%;
+  opacity: 0;
+}
+#projectpage.active {
+  width: 100%;
+  opacity: 1;
+}
+#profilepage {
+  width: 100%;
+  background-color: antiquewhite;
+  opacity: 1;
+}
+#projectpage {
+  width: 0%;
+  background-color: aliceblue;
+  opacity: 0;
+}
+.sub-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: width 800ms ease,opacity 750ms ease;
+}
+#contact {
+  width: 0%;
+  background-color: aliceblue;
+  opacity: 0;
+}
+#about {
+  width: 100%;
+  background-color: azure;
+  opacity: 1;
+}
+#contact.active {
+  width: 100%;
+  opacity: 1;
+}
+/* #about.active {
+  opacity: 0;
+} */
 .bottom-nav {
     display: inline-flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-content: center;
     position: fixed;
     left: 0;
     bottom: 0;
-    height: 10%;
+    height: 8%;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    z-index: 100;
 }
-.contact, .project,.home{
-    grid-row-start: 2;
-    grid-row-end: 3;
-    /* border: 0.1rem rgb(0, 0, 0) solid; */
+
+.nav-btn{
     height: 100%;
+    padding-top: 0.5rem;
 }
-.contact, .project {
+#btn-contact, #btn-project {
     flex-grow: 1;
-    justify-content: center;
-    align-content: center;
     text-align: center;
-    align-items: center;
-    justify-items: center;
 }
 img {
     max-width: 100%;
@@ -62,7 +110,8 @@ img {
   cursor: pointer;
   display: inline-flex;
   font-family: "JetBrains Mono",monospace;
-  height: 48px;
+  height: 80%;
+  width: 75%;
   justify-content: center;
   line-height: 1;
   list-style: none;
@@ -78,7 +127,7 @@ img {
   touch-action: manipulation;
   white-space: nowrap;
   will-change: box-shadow,transform;
-  font-size: 18px;
+  font-size: 1.5rem;
 }
 
 .button-30:focus {

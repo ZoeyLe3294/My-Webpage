@@ -10,26 +10,34 @@
 </head>
 <body>
     <main>
-        <h1>Good Day! I am</h1>
-        <h1>Zoey Le</h1>
-        <h1>The Coder - image</h1>
-        <h1>Javascript, HTML CSS, Android Studio - icon</h1>
+        <div class="container">
+            <div class="pages">
+                <div class="page" id="profilepage">
+                    <!-- <h1>Contact me</h1> -->
+                    <div class="sub-page" id="contact">Contact me</div>
+                    <div class="sub-page" id="about">About me</div>
+                </div>
+                <div class="page" id="projectpage">
+                    <h1>Projects</h1>
+                </div>
+            </div>
+        </div>
+
+        
     </main>
     <nav class="bottom-nav">
-        <div class="contact">
-            <button class="button-30" role="button">CONTACT ME</button>
+        <div class="nav-btn" id="btn-contact">
+            <button class="button-30" role="button" onclick="slide('contact')">C0NTACT ME</button>
         </div>
-        <div class="project">
-            <button class="button-30" role="button">MY PROJECTS</button>
-        </div>
-        <div class="home">
-            <button class="button-30" role="button">
+        <div class="nav-btn" id="btn-home">
+            <button class="button-30" role="button" onclick="slide('home')">
                 <img src="./assets/img/home_icon1.png">
             </button>
-            
+        </div>
+        <div class="nav-btn" id="btn-project">
+            <button class="button-30" role="button" onclick="slide('project')">MY PR0JECTS</button>
         </div>
     </nav>
-    
-
 </body>
 </html>
+<script src="./js/homePage.js"></script>
