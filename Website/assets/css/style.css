@@ -135,11 +135,20 @@ h6 {
   transition: all 0.5s;
   padding: 15px;
   overflow-y: auto;
-  background-color: rgb(0, 0, 0);
 }
-#header:hover {
-  width: 200px;
+#nav-background {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9996;
+  width: 86px;
+  padding: 15px;
+
 }
+
+
 @media (max-width: 992px) {
   #header {
     width: 300px;
@@ -184,7 +193,6 @@ h6 {
   color: #45505b;
   padding: 10px 18px;
   margin-bottom: 8px;
-  transition: 0.3s;
   font-size: 15px;
   border-radius: 50px;
   background: #f2f3f5;
@@ -445,7 +453,12 @@ section {
 .about .content p:last-child {
   margin-bottom: 0;
 }
-
+#profile-pic {
+  border-radius: 50%;
+}
+#about-info {
+  margin: auto;
+}
 /*--------------------------------------------------------------
 # Facts
 --------------------------------------------------------------*/
@@ -584,7 +597,14 @@ section {
   background: #fff;
   border: 2px solid #0563bb;
 }
-
+.download-icon i{
+  font-size: 1.5rem;
+  color: #0563bb;
+  transition: all 0.5s;
+}
+.download-icon i:hover{
+  font-size: 2rem;
+}
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
