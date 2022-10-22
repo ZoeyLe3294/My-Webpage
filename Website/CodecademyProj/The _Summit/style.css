@@ -1,0 +1,43 @@
+.nav-link {
+    cursor: pointer;
+  }
+  .nav-link:hover {
+    color: #2176FF;
+  }
+  .btn {
+    font-family: 'Raleway', sans-serif;
+    font-style: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255, 0.4);
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+    color: #ffffff;
+    transition: 0.5s;
+  }
+  .btn:hover {
+     box-shadow: 0 8px 10px -5px rgba(0, 0, 0,.8);
+     background-image: url("https://images.unsplash.com/photo-1418290232843-5d7a0bd93f7d?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb");
+     border: none;
+     text-transform: uppercase;
+     font-style: bold;
+  }
+  .btn:active {
+    box-shadow: none;
+  }
+  .activity {
+    border: 2px solid black;
+    border-radius: 10%;
+    box-shadow: 0 8px 10px -5px rgba(0, 0, 0,.8),inset 0 0 35px 0px rgba(0, 0, 0, 0.15);
+    
+        text-shadow: 1px -1px 3px rgba(143, 162, 199, 1),
+          -1px 1px 3px rgba(192, 151, 178, 1);
+          cursor: pointer;
+          transition: 0.2s;
+  }
+  .activity:hover {
+  transform: translateY(-2px);
+  }
+  .activity:active {
+    transform: translateY(0);
+  }
